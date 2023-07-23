@@ -1,0 +1,42 @@
+import React, { useState } from 'react';
+import { EAS } from "@ethereum-attestation-service/eas-sdk";
+
+const App = () => {
+  const [uid, setUid] = useState('');
+  const [attestation, setAttestation] = useState(null);
+  const [error, setError] = useState(null);
+  
+  const getAttestation = async () => {
+    try {
+      const eas = new EAS(EASContractAddress);
+      eas.connect(provider); // Provider needs to be set
+
+      const attestation = await eas.getAttestation(uid);
+
+      setAttestation(attestation);
+    } catch (err) {
+      setError(err.message);
+    }
+  }
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={uid}
+        onChange={e => setUid(e.target.value)}
+        placeholder="Enter UID"
+      />
+      <button onClick={getAttestation}>Get Attestation</button>
+      {attestation && (
+        <div>
+          <h2>Attestation:</h2>
+          <pre>{JSON.stringify(attestation, null, 2)}</pre>
+        </div>
+      )}
+      {error && <div>Error: {error}</div>}
+    </div>
+  );
+}
+
+export default App;
