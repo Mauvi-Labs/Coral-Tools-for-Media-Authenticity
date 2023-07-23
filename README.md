@@ -7,3 +7,6 @@ The project aims to address and solve a pressing societal issue - ensuring the a
 
 Although the hackathon focused on blockchain and cryptocurrency. I decided to integrate AI technologies to illustrate the role of crypto in providng the laws of ownership and creative credentialing.
 
+Project Name 
+
+Coral reefs have a very symbiotic relationship. If you look at an illustration of a latent space and an image of a coral reef, youn will find odd similarities between the natual systems and the artificial intellgent systems. 
