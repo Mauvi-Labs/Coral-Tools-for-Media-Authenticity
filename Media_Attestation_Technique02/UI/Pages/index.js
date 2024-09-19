@@ -1,4 +1,3 @@
-// pages/index.js
 import { useState } from 'react';
 import MediaUploader from '../components/MediaUploader';
 import MediaCard from '../components/MediaCard';
@@ -50,22 +49,22 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Media Attestation with EAS</h1>
+    <div className="container mx-auto p-4 bg-gray-900 min-h-screen text-white">
+      <h1 className="text-4xl font-bold mb-6">Media Attestation with EAS</h1>
 
       {/* MediaUploader component */}
       <MediaUploader onUpload={handleUpload} />
 
       {/* Attest and Verify Buttons */}
-      <div className="my-4">
+      <div className="my-6">
         <button 
-          className="bg-blue-500 text-white px-4 py-2 rounded mr-4"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded mr-4"
           onClick={handleAttestMedia}
         >
           Attest Media
         </button>
         <button 
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
           onClick={handleVerifyMedia}
         >
           Verify Media
@@ -73,7 +72,7 @@ export default function Home() {
       </div>
 
       {/* Attestation Hash */}
-      {attestation && <p>Attestation Hash: {attestation}</p>}
+      {attestation && <p className="mt-4 text-gray-300">Attestation Hash: {attestation}</p>}
 
       {/* MediaCard for displaying media and badge */}
       {mediaUrl && (
@@ -82,3 +81,4 @@ export default function Home() {
     </div>
   );
 }
+  
