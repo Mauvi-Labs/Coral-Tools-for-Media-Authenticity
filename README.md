@@ -67,7 +67,7 @@ python -m unittest discover tests
 
 # Media Attestation Technique No. 02
 
-This repository provides an **Ethereum Attestation Service (EAS)**-based **media attestation** technique for verifying the authenticity of media, specifically images and videos. It is designed to serve social media platforms and generative AI video platforms where users can attest media, verify its authenticity, and display a custom badge for verified content.
+The second technique provides an **Ethereum Attestation Service (EAS)**-based **media attestation** technique for verifying the authenticity of media, specifically images and videos. It is designed to serve social media platforms and generative AI video platforms where users can attest media, verify its authenticity, and display a custom badge for verified content.
 
 ## Features
 
