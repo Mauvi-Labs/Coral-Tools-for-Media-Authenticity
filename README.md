@@ -109,13 +109,16 @@ The second technique provides an **Ethereum Attestation Service (EAS)**-based **
    cd Media_Attestation_Technique2
    
 2. **Install dependencies**:
-   npm install
+   
+npm install
 
 3. **Deploy the smart contract using hardhat**
-   npx hardhat run scripts/deploy.js --network <your-network>
+   
+npx hardhat run scripts/deploy.js --network <your-network>
 
 4. **Start Next.js**
-   npm run dev
+   
+npm run dev
 
 5. **Connect an ethereum wallet**
    Make sure to connect an ethrreum wallet to the correct Ethereum network (e.g., Rinkeby, Mainnet, etc.).
