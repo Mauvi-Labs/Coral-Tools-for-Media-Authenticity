@@ -4,7 +4,7 @@ Updating....Coral combines vision models with attestation techniques and other c
 
 # Media Attestation Technique No. 01
 
-The media attestation technique in this project provides a tool for cryptographic signatures, particularly designed for use in social media platforms. It allows users to sign media files and verify the authenticity of signed media.
+The first media attestation technique in this project provides a tool for cryptographic signatures, particularly designed for use in social media platforms. It allows users to sign media files and verify the authenticity of signed media.
 
 ## Features
 
@@ -65,9 +65,66 @@ To run the unit tests:
 python -m unittest discover tests
 ```
 
-## Contributing
+# Media Attestation Technique No. 02
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+This repository provides an **Ethereum Attestation Service (EAS)**-based **media attestation** technique for verifying the authenticity of media, specifically images and videos. It is designed to serve social media platforms and generative AI video platforms where users can attest media, verify its authenticity, and display a custom badge for verified content.
+
+## Features
+
+- **Media Upload**: Users can upload media (images or videos) and generate a unique hash for attestation.
+- **Ethereum Attestation Service (EAS) Integration**: The media hash is attested and verified using the EAS protocol.
+- **Badge System**: Verified media is displayed with an "OG 🖌️" badge to indicate authenticity.
+- **Dark Mode Support**: The interface is styled for dark mode.
+
+### Key Components
+
+- **`contracts/MediaAttestation.sol`**: A smart contract that interacts with the Ethereum Attestation Service (EAS) to handle the attestation and verification process for media hashes.
+  
+- **`EAS_config.js`**: Provides a helper function to configure the EAS SDK and connect it with an Ethereum wallets.
+
+- **`UI/components/MediaUploader.js`**: Allows users to upload media (images or videos) and calculates a SHA-256 hash, which is then used for attestation.
+
+- **`UI/components/AttestationBadge.js`**: Displays a custom "OG 🖌️" badge for verified media or leaves it empty if the media is not verified.
+
+- **`UI/components/MediaCard.js`**: Displays the uploaded media in a card-like format, along with the verification badge.
+
+- **`UI/pages/index.js`**: The main Next.js page where media upload, attestation, and verification take place. It integrates the `MediaUploader`, `MediaCard`, and handles the attestation flow using the EAS SDK.
+
+---
+
+## Installation
+
+### Prerequisites
+
+- **Node.js** (v14.x or above)
+- **Metamask** or any Ethereum-compatible wallet
+- **Hardhat** (for deploying the smart contract)
+- **Next.js** (for the frontend)
+
+### Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/Media_Attestation_Technique2.git
+   cd Media_Attestation_Technique2
+   
+2. **Install dependencies**:
+   npm install
+
+3. **Deploy the smart contract using hardhat**
+   npx hardhat run scripts/deploy.js --network <your-network>
+
+4. **Start Next.js**
+   npm run dev
+
+5. **Connect an ethereum wallet**
+   Make sure to connect an ethrreum wallet to the correct Ethereum network (e.g., Rinkeby, Mainnet, etc.).
+
+---
+
+## Contributions
+
+This project is **open-source** and welcomes contributions from the community. Feel free to submit pull requests or open issues.
 
 ## License
 
