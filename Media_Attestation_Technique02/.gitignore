@@ -1,0 +1,9 @@
+node_modules/
+.env
+package-lock.json
+yarn.lock
+.next/
+.DS_Store
+**/next-swc*.node
+.gitattributes
+npm-debug.log
